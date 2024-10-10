@@ -1,7 +1,8 @@
 export class User{
 
-    constructor(identification, password){
+    constructor(identification,email, password){
         this.identification = identification;
+        this.email = email
         this.password = password;
     }
 
@@ -21,4 +22,11 @@ export class User{
         this.password = password;
     }
 
+    getEmail(){
+        return this.email;
+    }
+
+    setEmail(email){
+        this.email = email;
+    }
 }

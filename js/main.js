@@ -7,10 +7,11 @@ class Main {
         
         this.sistemaReservas = new SistemaReservas();
         
-        this.sistemaReservas.addUser("123", "123");
-        this.sistemaReservas.addUser("456", "456");
+        this.sistemaReservas.addUser("1020222955","fvilla955@soyudemedellin.edu.co", "contrasena123");
+        this.sistemaReservas.addUser("456","correo@gmail.com", "456");
 
         this.initLogin();
+        this.rememberPassword();
         
     }
 
@@ -32,6 +33,28 @@ class Main {
                 alert("Usuario o contraseña incorrectos");
             }
         })
+    }
+
+    rememberPassword(){
+        const rememberPassword = document.querySelector("#remember-btn");
+
+        rememberPassword.addEventListener("click", (event) =>{
+            event.preventDefault();
+
+            const identification = document.querySelector("#identification").value;
+
+            const user = this.sistemaReservas.findUser(identification);
+
+            if(user == null){
+                console.log("Lo siento el usuario no existe");
+            } else{
+                window.location.href = "../html/recordar_contrasena2.html";
+                this.sistemaReservas.sendEmail(user);
+                console.log("Se ha enviado un correo notificandote tu contraseña");
+            }
+        })
+
+        
     }
 
 
