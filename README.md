@@ -5,7 +5,7 @@
 - Felipe Villa Jaramillo
 - Juan Pablo Cardona Bedoya
 - Angie Norela Díaz Abaunza
-- Mateo Molina Al
+- Mateo Molina Alvarez
 - Walter Bedoya Perez
 
 ## ¿Qué es y para qué es?
